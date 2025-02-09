@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "../groups/students/table/table.jsx";
 
 const Filter = () => {
@@ -20,6 +20,10 @@ const Filter = () => {
       ))}
     </select>
   );
+};
+
+Filter.propTypes = {
+  uniqueGroups: PropTypes.arrayOf(PropTypes.string).isRequired, // Массив уникальных групп
 };
 
 export default Filter;

@@ -1,4 +1,6 @@
+import React from "react";
 import { useState } from "react";
+import PropTypes from "prop-types";
 import "./postForm.css";
 
 const PostForm = ({ onClose, onSubmit }) => {
@@ -76,6 +78,11 @@ const PostForm = ({ onClose, onSubmit }) => {
       </div>
     </div>
   );
+};
+
+PostForm.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default PostForm;

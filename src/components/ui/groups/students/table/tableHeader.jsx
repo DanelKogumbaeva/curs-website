@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Table.css";
 
 const TableHeader = ({
@@ -37,6 +38,15 @@ const TableHeader = ({
       </div>
     </div>
   );
+};
+
+TableHeader.propTypes = {
+  searchTerm: PropTypes.string.isRequired, // Поисковая строка
+  setSearchTerm: PropTypes.func.isRequired, // Функция для изменения поискового запроса
+  filterGroup: PropTypes.string.isRequired, // Выбранная группа для фильтрации
+  setFilterGroup: PropTypes.func.isRequired, // Функция для установки фильтра группы
+  uniqueGroups: PropTypes.arrayOf(PropTypes.string).isRequired, // Уникальные группы для выбора
+  onAdd: PropTypes.func.isRequired, // Функция для добавления нового элемента
 };
 
 export default TableHeader;

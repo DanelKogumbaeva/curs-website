@@ -1,4 +1,6 @@
 import "./filterPanel.css";
+import PropTypes from "prop-types";
+import React from "react";
 
 const FilterPanel = ({ setFilter }) => {
   return (
@@ -14,6 +16,11 @@ const FilterPanel = ({ setFilter }) => {
       <button onClick={() => setFilter("Старосты")}>Старосты</button>
     </div>
   );
+};
+
+FilterPanel.propTypes = {
+  // setFilter должен быть функцией и является обязательным пропсом
+  setFilter: PropTypes.func.isRequired,
 };
 
 export default FilterPanel;
