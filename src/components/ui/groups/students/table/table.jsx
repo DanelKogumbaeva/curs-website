@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import "./Table.css";
 import TableHeader from "./TableHeader";
 import TableBody from "./TableBody";
@@ -49,6 +50,26 @@ const Table = ({ students, onAdd, onUpdate, onDelete }) => {
       )}
     </div>
   );
+};
+
+Table.propTypes = {
+  students: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired, // ID студента
+      firstName: PropTypes.string.isRequired, // Имя
+      lastName: PropTypes.string.isRequired, // Фамилия
+      birthDate: PropTypes.string.isRequired, // Дата рождения
+      gender: PropTypes.string.isRequired, // Пол
+      email: PropTypes.string.isRequired, // Email
+      phone: PropTypes.string.isRequired, // Телефон
+      address: PropTypes.string.isRequired, // Адрес
+      enrollmentDate: PropTypes.string.isRequired, // Дата зачисления
+      group_id: PropTypes.number.isRequired, // ID группы
+    })
+  ).isRequired, // Обязательный массив студентов
+  onAdd: PropTypes.func.isRequired, // Функция добавления студента
+  onUpdate: PropTypes.func.isRequired, // Функция обновления студента
+  onDelete: PropTypes.func.isRequired, // Функция удаления студента
 };
 
 export default Table;

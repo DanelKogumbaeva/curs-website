@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import "./post.css";
 
 const Post = ({ post }) => {
@@ -22,6 +24,15 @@ const Post = ({ post }) => {
       </div>
     </div>
   );
+};
+
+Post.propTypes = {
+  post: PropTypes.shape({
+    text: PropTypes.string.isRequired, // текст обязательно должен быть строкой
+    attachment: PropTypes.shape({
+      name: PropTypes.string.isRequired, // если attachment передан, то у него должно быть поле name типа string
+    }),
+  }).isRequired, // пропс post обязательно должен передаваться
 };
 
 export default Post;

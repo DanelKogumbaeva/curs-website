@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./studentForm.css";
+import PropTypes from "prop-types";
+
 const StudentForm = ({ student, onClose, onSave, onDelete, onAdd }) => {
   const [formData, setFormData] = useState({
     first_name: "",
@@ -126,6 +128,28 @@ const StudentForm = ({ student, onClose, onSave, onDelete, onAdd }) => {
       </div>
     </div>
   );
+};
+
+// Валидация пропсов
+StudentForm.propTypes = {
+  // Объект student может содержать данные студента, если он передан
+  student: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    first_name: PropTypes.string,
+    last_name: PropTypes.string,
+    birth_date: PropTypes.string,
+    gender: PropTypes.string,
+    email: PropTypes.string,
+    phone: PropTypes.string,
+    address: PropTypes.string,
+    enrollment_date: PropTypes.string,
+    group_id: PropTypes.string,
+  }),
+  // onClose, onSave, onDelete, onAdd должны быть функциями
+  onClose: PropTypes.func.isRequired,
+  onSave: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onAdd: PropTypes.func.isRequired,
 };
 
 export default StudentForm;

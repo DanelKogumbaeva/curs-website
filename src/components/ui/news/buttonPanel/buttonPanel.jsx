@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import "./buttonPanel.css";
 
 const ButtonPanel = ({ onAddPost, toggleFilter }) => {
@@ -19,6 +21,10 @@ const ButtonPanel = ({ onAddPost, toggleFilter }) => {
       </button>
     </div>
   );
+};
+ButtonPanel.propTypes = {
+  onAddPost: PropTypes.func.isRequired, // Функция для добавления поста (обязательная)
+  toggleFilter: PropTypes.func.isRequired, // Функция для переключения фильтра (обязательная)
 };
 
 export default ButtonPanel;
