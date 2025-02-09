@@ -1,0 +1,84 @@
+/* Форма создания публикации */
+.post-form {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  max-width: 400px;
+  background: #eefaf1;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="file"] {
+  padding: 5px;
+}
+
+button {
+  background: transparent;
+  color: #5a5a5a;
+  border: none;
+}
+
+select {
+  height: 30px;
+  border-color: #accdb5;
+  border-radius: 5px;
+}
+
+.btn-form {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn_form {
+  color: rgb(184, 184, 184);
+  padding: 5px;
+}
+
+.btn_form:hover {
+  color: rgb(47, 148, 47);
+  box-shadow: 0px 0px 10px rgba(17, 45, 14, 0.1);
+  border-radius: 10%;
+}
+
+.photo-scr {
+  height: 40px;
+  margin: 4px 4px 4px 0px;
+}
+
+.attachment-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #d4edda;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #155724;
+  margin-top: 10px;
+  position: relative;
+}
+
+.remove-attachment {
+  background: none;
+  border: none;
+  color: rgb(84, 88, 91);
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+}

@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-position: center;
+}
+
+header {
+  background: rgb(49, 159, 66);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+}
+
+.menu {
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  position: relative;
+  margin: 0px 15px;
+  display: flex;
+  align-items: center; /* Выравниваем текст по центру */
+  padding: 0px;
+}
+
+.menu-item:hover {
+  background: rgb(45, 130, 58);
+}
+
+.menu-item a {
+  text-decoration: none;
+  padding: 14px 15px;
+  color: #ffffff;
+  display: flex;
+}
+
+.menu-item:hover > .menu1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu1 {
+  width: 180px;
+  background: #ececec;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0px;
+}
+
+.menu-item1 {
+  position: relative;
+}
+.menu-item1 a,
+.menu-item2 a {
+  color: #5a5a5a;
+  padding: 15px 8px;
+}
+
+.menu-item1:hover {
+  background: #e6e5e5;
+}
+.menu-item1 a:hover {
+  color: #21a649;
+}
+
+.menu-item2 {
+  padding: 0px;
+}
+
+.menu-item2:hover {
+  background: rgb(236, 236, 236);
+}
+.menu-item2 a:hover {
+  color: rgb(66, 188, 85);
+}
+
+/* Добавлено для выпадающего меню2 */
+.menu-item1:hover > .menu2 {
+  display: block;
+}
+
+.menu2 {
+  width: 180px;
+  background: rgb(243, 243, 243);
+  display: none;
+  position: absolute;
+  top: 0; /* Выровнять относительно родительского элемента */
+  left: 100%; /* Сместить в сторону */
+  padding: 0;
+  z-index: 2;
+}
+
+.photo {
+  width: 35px;
+  height: auto;
+  padding: 1%;
+  margin-left: 4px;
+}
+.photo-pr {
+  width: 35px;
+  height: auto;
+  border-radius: 50%;
+  padding: 1%;
+  margin-left: 4px;
+}
