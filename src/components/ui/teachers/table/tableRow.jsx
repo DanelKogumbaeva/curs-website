@@ -18,7 +18,6 @@ const TableRow = ({ student, index, onRowClick }) => {
       <td>{student.phone}</td>
       <td>{student.address}</td>
       <td>{student.enrollment_date}</td>
-      <td>{student.group_id || "N/A"}</td>
     </tr>
   );
 };

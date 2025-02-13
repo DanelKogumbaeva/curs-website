@@ -1,8 +1,8 @@
 import React from "react";
-import "./Students.css";
+import "./Teacher.css";
 import Table from "./table/table";
 
-const studentsData = [
+const TeachersData = [
   {
     id: 1,
     last_name: "Когумбаева",
@@ -31,13 +31,13 @@ const studentsData = [
   },
 ];
 
-const Students = () => {
+const Teacher = () => {
   return (
     <main>
-      <h1>любимые студенты</h1>
-      <Table students={studentsData} />
+      <h1>любимые преподы</h1>
+      <Table students={TeachersData} />
     </main>
   );
 };
 
-export default Students;
+export default Teacher;

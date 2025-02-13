@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./Table.css";
 import TableHeader from "./TableHeader";
-import TableBody from "./TableBody";
-import StudentForm from "../studentForm/studentForm.jsx";
+import TableBody from "./tableBody.jsx";
+import StudentForm from "../teacherForm/teacherForm.jsx";
 
 const Table = ({ students, onAdd, onUpdate, onDelete }) => {
   const [searchTerm, setSearchTerm] = useState("");

@@ -1,0 +1,41 @@
+/* Основные стили контейнера */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  height: 100vh;
+
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+}
+
+/* Стили профиля студента */
+.profile-card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height: 250px;
+  align-items: center;
+}
+
+p {
+  margin: 10px;
+}
+
+/* Стили для фотографии */
+.profile-ph {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+/* Стили для блока с информацией */
+.info {
+  flex: 1;
+  text-align: left;
+}

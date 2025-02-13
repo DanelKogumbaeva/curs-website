@@ -1,8 +1,33 @@
-.table-container {
+main {
   width: 100%;
   padding: 20px;
+}
+.schedule-container {
+  width: 100%;
+  max-width: 1450px;
+  padding: 20px;
+}
 
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
   border-radius: 10px;
+}
+
+.schedule-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-row:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
 .table-header {
@@ -11,9 +36,12 @@
   margin-bottom: 10px;
 }
 
-.search-input {
-  width: 250px;
-  text-align: left;
+.search-input,
+.filter-select-group {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .filter-select-group {
@@ -35,8 +63,9 @@
 
 .table {
   width: 100%;
+  max-width: 1450px;
   border-collapse: collapse;
-  margin: 0px;
+  border-radius: 10px;
 }
 
 .table th,

@@ -17,8 +17,7 @@ const TableBody = ({ students, onRowClick }) => {
           <th>Email</th>
           <th>Телефон</th>
           <th>Домашний Адрес</th>
-          <th>Дата Зачисления</th>
-          <th>Номер Группы</th>
+          <th>Дата Трудоустройства</th>
         </tr>
       </thead>
       <tbody>
@@ -41,7 +40,7 @@ TableBody.propTypes = {
       id: PropTypes.number.isRequired, // ID студента
       lastName: PropTypes.string.isRequired, // Фамилия
       firstName: PropTypes.string.isRequired, // Имя
-
+      surname: PropTypes.string.isRequired, // Имя
       birthDate: PropTypes.string.isRequired, // Дата рождения
       gender: PropTypes.string.isRequired, // Пол
       email: PropTypes.string.isRequired, // Email

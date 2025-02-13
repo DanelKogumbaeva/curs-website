@@ -6,16 +6,18 @@ const Header = () => {
   return (
     <header>
       <div className="nav">
-        <img
-          className="photo"
-          src="src/assets/imag/poly-logo.svg"
-          alt="Логотип Политеха"
-        />
-        <img
-          className="photo"
-          src="src/assets/imag/ispo.svg"
-          alt="Логотип ИСПО"
-        />
+        <a href="https://college.spbstu.ru/">
+          <img
+            className="photo"
+            src="src/assets/imag/poly-logo.svg"
+            alt="Логотип Политеха"
+          />
+          <img
+            className="photo"
+            src="src/assets/imag/ispo.svg"
+            alt="Логотип ИСПО"
+          />
+        </a>
       </div>
 
       <nav className="nav">
@@ -29,29 +31,16 @@ const Header = () => {
             </Link>
             <ul className="menu1">
               <li className="menu-item1">
-                <Link to="/MainPage">Все Студенты</Link>
+                <Link to="/Students">Все Студенты</Link>
               </li>
               <li className="menu-item1">
-                <Link to="/MainPage">инф сист</Link>
-                <ul className="menu2">
-                  <li className="menu-item2">
-                    <Link to="/MainPage">419/7</Link>
-                  </li>
-                  <li className="menu-item2">
-                    <Link to="/MainPage">419/8</Link>
-                  </li>
-                </ul>
+                <Link to="/Book">
+                  Информационные системы и программирование
+                </Link>
+                <ul className="menu2"></ul>
               </li>
               <li className="menu-item1">
-                <Link to="/MainPage">комп сети</Link>
-                <ul className="menu2">
-                  <li className="menu-item2">
-                    <Link to="/MainPage">429/7</Link>
-                  </li>
-                  <li className="menu-item2">
-                    <Link to="/MainPage">429/8</Link>
-                  </li>
-                </ul>
+                <Link to="/Book">Компьютерные сети и программирование</Link>
               </li>
             </ul>
           </li>
@@ -66,10 +55,10 @@ const Header = () => {
             </Link>
             <ul className="menu1">
               <li className="menu-item1">
-                <Link to="/MainPage">мое</Link>
+                <Link to="/ScheduleStudent">группы</Link>
               </li>
               <li className="menu-item1">
-                <Link to="/MainPage">преподаватели</Link>
+                <Link to="/TeacherSchedul">преподаватели</Link>
               </li>
             </ul>
           </li>
@@ -82,7 +71,7 @@ const Header = () => {
       </nav>
 
       <div className="nav">
-        <a href="/profile">
+        <a href="/Profile">
           <img
             className="photo-pr"
             src="src/assets/imag/profile.jpeg"
